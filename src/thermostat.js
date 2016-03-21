@@ -2,8 +2,8 @@
 
   this.temperature = 20;
   this.MIN_TEMP = 10;
-  this.MAX_TEMP = 32;
-
+  this.MAX_TEMP = 25;
+  this.powerSavingMode = true;
 }
 
 Thermostat.prototype.getCurrentTemperature = function () {
@@ -16,7 +16,7 @@ Thermostat.prototype.up = function () {
     this.temperature += 1;
   }
   else {
-    return "I ain't about to fry bitch";
+    throw "I ain't about to fry bitch";
   }
 
 };
@@ -29,4 +29,12 @@ Thermostat.prototype.down = function () {
     return "Soz it's too cold for that shit";
   }
 
+};
+
+Thermostat.prototype.powerSavingSwitch = function() {
+  return this.powerSavingMode != this.powerSavingMode;
+};
+
+Thermostat.prototype.powerSavingStatus = function () {
+  return this.powerSavingMode;
 };
