@@ -47,5 +47,19 @@ Thermostat.prototype.powerSavingStatus = function () {
 };
 
 Thermostat.prototype.reset = function () {
-  return this.temperature = 20;
+  this.temperature = 20;
+  return this.temperature;
+};
+
+Thermostat.prototype.energyUsage = function () {
+
+      if (this.temperature < 18) {
+      return 'low-usage';
+    }
+    else if (this.temperature >= 25) {
+      return 'high-usage';
+    }
+    else {
+      return 'med-usage';
+    }
 };
