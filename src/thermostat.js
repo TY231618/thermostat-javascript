@@ -63,3 +63,7 @@ Thermostat.prototype.energyUsage = function () {
       return 'med-usage';
     }
 };
+
+Thermostat.prototype.converter = function (temp) {
+  return (temp - 32) * 5 / 9;
+};
