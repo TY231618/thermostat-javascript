@@ -32,7 +32,14 @@ Thermostat.prototype.down = function () {
 };
 
 Thermostat.prototype.powerSavingSwitch = function() {
-  return this.powerSavingMode != this.powerSavingMode;
+  if (this.powerSavingMode === true) {
+    this.powerSavingMode = false;
+    this.MAX_TEMP = 32;
+  }
+  else {
+    this.powerSavingMode = true;
+    this.MAX_TEMP = 25;
+  }
 };
 
 Thermostat.prototype.powerSavingStatus = function () {

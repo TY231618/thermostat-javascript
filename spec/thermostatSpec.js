@@ -67,8 +67,8 @@ describe('Thermostat', function() {
         do {
           thermostat.up();
         }
-        while (thermostat.degrees < 32);
-        expect(function(){ thermostat.up(); }).toThrowError('Temperature cannot exceed 32');
+        while (thermostat.temperature < 32);
+        expect(function(){ thermostat.up(); }).toThrow("I ain't about to fry bitch");
       });
     });
 });
