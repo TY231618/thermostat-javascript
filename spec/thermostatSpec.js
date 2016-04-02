@@ -67,10 +67,6 @@ describe('Thermostat', function() {
         for (var i = 20; i < 32; i++) {
           thermostat.up();
         }
-        // do {
-        //   thermostat.up();
-        // }
-        // while (thermostat.temperature <= 32);
         expect(function(){ thermostat.up(); }).toThrow("I ain't about to fry bitch");
       });
     });

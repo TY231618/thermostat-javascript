@@ -5,30 +5,52 @@
     <script src="src/thermostat.js"></script>
     <script src="src/jquery.min.js"></script>
     <script src="src/interface.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
 
     <title>Thermostat</title>
   </head>
   <body>
-    <section>
-      <h1>House Temperature: <span id="temperature"></span></h1>
-      <p>
-        <button id="temperature-up">+</button>
-        <button id="temperature-down">-</button>
-        <button id="temperature-reset">reset</button>
-        power saving mode is <span id="power-saving-status">On</span>
-        <button id="powersaving-off">PSM On</button>
-        <button id="powersaving-on">PSM Off</button>
-      </p>
-    </section>
-    <section>
-      <section>
+    <section class="thermo-outer-border">
+      <section class="thermo-body">
+        <h1>Thermostat Temperature: </h1>
+        <div class="temp-border">
+          <div class="temp-value">
+            <h2 id="temperature"></h2>
+          </div>
+        </div>
+        <br>
+        <p>
+          <button id="temperature-up" class="btn btn-danger btn-lg">+</button>
+          <button id="temperature-down" class="btn btn-danger btn-lg">-</button>
+          <button id="temperature-reset" class="btn btn-success btn-lg">reset</button>
+          <br><br>
+          power saving mode is <span id="power-saving-status">On</span>
+          <br><br>
+          <button id="powersaving-off" class="btn btn-primary">PSM On</button>
+          <button id="powersaving-on" class="btn btn-primary">PSM Off</button>
+        </p>
+        <br><br>
+        <h2>Random City Temperature:</h2>
+        <form id="select-city">
+          <input id="current-city" type="text" placeholder="Enter a city"></input>
+          <br><br>
+          <input class="btn btn-warning" type="submit"></input>
+        </form>
+        <br>
+        <div class="city-temp-border">
+          <div class="city-temp-value">
+            <h2 id="current-temperature"></h2>
+          </div>
+        </div>
       </section>
-      <form id="select-city">
-        <input id="current-city" type="text" placeholder="Enter a city"></input>
-        <input type="submit"></input>
-      </form>
-      <h1>Outside temperature: <span id="current-temperature"><span></h1>
     </section>
+    <br><br>
+    <footer>
+      <div class="line"></div>
+      <br>
+      <p>Thermostat, created by: Tony Young whilst at <a href="http://www.makersacademy.com/">Makers Academy</a> | Copyright 2016, All Rights Reserved</p>
+      <!-- <p>Github: <a href="https://github.com/TY231618">TY231618</a></p> -->
+    </footer>
   </body>
 </html>
