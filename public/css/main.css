@@ -38,6 +38,16 @@
   font-family: Digital-7;
 }
 
+/*.thermo-body h1 {
+  font-family: MAG Font;
+  font-size: 4em;
+}
+
+.thermo-body h2 {
+  font-family: MAG Font;
+  font-size: 3em;
+}*/
+
 .temp-border {
   border: 1px solid black;
   max-width: 90px;
