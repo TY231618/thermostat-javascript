@@ -20,5 +20,22 @@ $(document).ready(function() {
   $('#powersaving-on').on('click', function() {
     thermostat.powerSavingSwitch();
     $('#temperature').text(thermostat.temperature);
+    $('#power-saving-status').text('Off');
+  });
+
+  $('#powersaving-off').on('click', function() {
+    thermostat.powerSavingSwitch();
+    $('#temperature').text(thermostat.temperature);
+    $('#power-saving-status').text('On');
+  });
+
+  $('#select-city').submit(function(event) {
+  event.preventDefault();
+  var city = $('#current-city').val();
+  var url = 'http://api.openweathermap.org/data/2.5/weather?q=';
+  var token = '&APPID=90139be1ac6909c91441c2f5b1c5896c&units=metric';
+    $.get(url + city + token, function(data) {
+      $('#current-temperature').text(data.main.temp);
+    });
   });
 });

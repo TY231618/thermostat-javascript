@@ -29,7 +29,7 @@ describe('Thermostat', function() {
   });
 
   it('has a max of 25 degrees', function() {
-    for (var i = 0; i < 13; i++) {
+    for (var i = 20; i < 25; i++) {
       thermostat.up();
     }
     expect(thermostat.getCurrentTemperature()).toEqual(25);
@@ -64,10 +64,13 @@ describe('Thermostat', function() {
 
       it('has max temperature of 32', function() {
         thermostat.powerSavingSwitch();
-        do {
+        for (var i = 20; i < 32; i++) {
           thermostat.up();
         }
-        while (thermostat.temperature < 32);
+        // do {
+        //   thermostat.up();
+        // }
+        // while (thermostat.temperature <= 32);
         expect(function(){ thermostat.up(); }).toThrow("I ain't about to fry bitch");
       });
     });

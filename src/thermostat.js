@@ -40,6 +40,7 @@ Thermostat.prototype.powerSavingSwitch = function() {
     this.powerSavingMode = true;
     this.MAX_TEMP = 25;
   }
+  // this.powerSavingMode = !this.powerSavingMode;
 };
 
 Thermostat.prototype.powerSavingStatus = function () {
@@ -53,7 +54,7 @@ Thermostat.prototype.reset = function () {
 
 Thermostat.prototype.energyUsage = function () {
 
-      if (this.temperature < 18) {
+    if (this.temperature < 18) {
       return 'low-usage';
     }
     else if (this.temperature >= 25) {
