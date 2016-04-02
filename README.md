@@ -4,18 +4,18 @@ The challenge this week at Makers Academy was to build a interactive thermostat 
 
 Installation
 -------
-1. Clone this repo $ git clone git@github.com:Wynndow/thermostat.git
-2. Change directory into it $ cd thermostat
+1. Clone this repo `$ git clone git@github.com:TY231618/thermostat-javascript.git`
+2. Change directory into it `$ cd thermostat`
 
 Usage
 ------
-1. Open the app with $ open index.html
+1. Open the app with `$ open index.html`
 2. Control temperature and toggle power saving mode (limits max temp) with the buttons.
 3. Use the text field to search for any city in the world and display it's weather.
 
 Running tests
 ---------
-* Tests are run and results displayed with $ open SpecRunner.html
+* Tests are run and results displayed with `$ open SpecRunner.html`
 
 Future Improvements
 ----------
