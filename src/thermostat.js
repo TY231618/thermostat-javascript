@@ -16,7 +16,7 @@ Thermostat.prototype.up = function () {
     this.temperature += 1;
   }
   else {
-    throw "I ain't about to fry bitch";
+    throw "I ain't about to fry";
   }
 
 };
@@ -26,7 +26,7 @@ Thermostat.prototype.down = function () {
     this.temperature -= 1;
   }
   else {
-    return "Soz it's too cold for that shit";
+    return "Sorry it's too cold, no lower please!";
   }
 
 };

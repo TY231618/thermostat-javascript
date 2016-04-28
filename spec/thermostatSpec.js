@@ -46,7 +46,7 @@ describe('Thermostat', function() {
         thermostat.up();
       }
       while (thermostat.temperature < 25);
-      expect(function(){ thermostat.up(); }).toThrow("I ain't about to fry bitch");
+      expect(function(){ thermostat.up(); }).toThrow("I ain't about to fry");
     });
   });
 
@@ -67,7 +67,7 @@ describe('Thermostat', function() {
         for (var i = 20; i < 32; i++) {
           thermostat.up();
         }
-        expect(function(){ thermostat.up(); }).toThrow("I ain't about to fry bitch");
+        expect(function(){ thermostat.up(); }).toThrow("I ain't about to fry");
       });
     });
 });

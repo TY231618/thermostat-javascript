@@ -48,6 +48,10 @@
   font-size: 3em;
 }*/
 
+#current-city {
+  color: black;
+}
+
 .temp-border {
   border: 1px solid black;
   max-width: 90px;
